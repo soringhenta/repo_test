@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying'
+                input "It's OK tu contirnue??"
             }
         }
     }
