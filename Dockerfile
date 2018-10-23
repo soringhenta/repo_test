@@ -1,26 +1,4 @@
-Skip to content
- 
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- @soringhenta Sign out
- The password you provided has been reported as compromised due to re-use of that password on another service by you or someone else. GitHub has not been compromised directly. To increase your security, please change your password as soon as possible.
-
-Read our documentation on safer password practices. See our blog for more details.
-
-299
-2,419 1,899 jenkinsci/docker
-forked from michaelneale/jenkins-ci.org-docker
- Code  Issues 46  Pull requests 15  Projects 0  Wiki  Insights
-docker/Dockerfile
-c2d6f21  on Sep 9, 2017
-@carlossg carlossg Merge branch 'master' into alpine
-@carlossg @ndeloof @michaelneale @MarkEWaite @daniel-beck @CoRfr @kohsuke @jpthiery @jonhermansen @jglick @gmacario @elifarley @Vlatombe @rtyler @krallin @stigsb @KengoTODA @sbesson @sgnewson @samgd @pli01 @oleg-nenashev @ngiger @nestorsalceda @muicoder @md5
-    
-75 lines (54 sloc)  2.84 KB
 FROM openjdk:8u121-jdk-alpine
 
 RUN apk add --no-cache git openssh-client curl unzip bash ttf-dejavu coreutils
@@ -95,16 +73,4 @@ ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins.sh"]
 # from a derived Dockerfile, can use `RUN plugins.sh active.txt` to setup /usr/share/jenkins/ref/plugins from a support bundle
 COPY plugins.sh /usr/local/bin/plugins.sh
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
+
