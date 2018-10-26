@@ -19,15 +19,15 @@ thirdEnvVar= 'THIRD_VAR'
             }
             steps{
                 script{
-                    if (env.run_test_only =='yes')
-                        {
-                        echo env.firstEnvVar
-                        echo "+++++++=====+++++"
-                        }
-                    else
-                        {
-                        echo env.secondEnvVar
-                        }
+                    shagent (credentials: ['jenkins']) {
+    
+    sh '''
+    ssh -o StrictHostKeyChecking=no ocadmin@scar.connex.ro "cd /var/opt/OC/simulator/tomcat-simulator_0/bin && ./shutdown.sh
+    sleep 20
+    ./startup.sh
+    "
+    '''
+  }
                   }
             }
         }
