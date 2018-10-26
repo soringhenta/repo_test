@@ -14,9 +14,9 @@ thirdEnvVar= 'THIRD_VAR'
     stages {
         stage('Test'){
              //conditional for parameter
-            when {
-                environment name: 'run_test_only', value: 'yes'
-            }
+            //when {
+            //    environment name: 'run_test_only', value: 'yes'
+            //}
             steps{
                 script{
                     shagent (credentials: ['jenkins']) {
