@@ -19,7 +19,7 @@ thirdEnvVar= 'THIRD_VAR'
             //}
             steps{
                 script{
-                    shagent (credentials: ['jenkins']) {
+                    sshagent (credentials: ['jenkins']) {
     
     sh '''
     ssh -o StrictHostKeyChecking=no ocadmin@scar.connex.ro "cd /var/opt/OC/simulator/tomcat-simulator_0/bin && ./shutdown.sh
