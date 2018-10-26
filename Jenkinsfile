@@ -22,6 +22,7 @@ thirdEnvVar= 'THIRD_VAR'
                     if (env.run_test_only =='yes')
                         {
                         echo env.firstEnvVar
+                        echo "+++++++=====+++++"
                         }
                     else
                         {
